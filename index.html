@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Virtual Assistant || KUSHAGRA SHARMA</title>
+    <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Gradient background for AI-themed design */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Full screen background video */
+        video.background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Main content container */
+        .main {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Image container with glowing effects */
+        .image-container {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* Video Element with background color and AI style */
+        .image-container video {
+            width: 30%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* AI-inspired heading and subheading with glow effect */
+        h1 {
+            font-size: 5rem;  /* Increased font size */
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgba(0, 255, 255, 1);
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Glitter and shining effect on text */
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #333;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Shining effect animation */
+        @keyframes shimmer {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+            }
+
+            50% {
+                text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.6);
+            }
+
+            100% {
+                text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+            }
+        }
+
+        /* Pre element styling */
+        pre {
+            font-size: 1.2rem;
+            color: aqua;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Microphone button */
+        .input {
+            margin-top: 20px;
+        }
+
+        .talk {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: black; /* Updated to black */
+            box-shadow: 0 4px 15px rgba(0, 118, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .talk:hover {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            box-shadow: 0 8px 25px rgba(0, 118, 255, 0.8);
+        }
+
+        .content {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Background decorative dots (AI feel) */
+        .dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background-image: radial-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Full-screen background video -->
+    <video autoplay loop muted class="background-video">
+        <source src="human.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Decorative background dots -->
+    <div class="dots"></div>
+
+    <section class="main">
+        <div class="image-container">
+            <div class="image">
+                <!-- Video Element with Reduced Size and Dark Background -->
+                <video autoplay loop muted>
+                    <source src="javaris.gif.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h1>J A R V I S</h1>
+            <p>I'm a Virtual Assistant JARVIS, How may I help you?<pre>KUSHAGRA SHARMA</pre></p>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i> Speak Now</button>
+            <h1 class="content">Click the button to interact</h1>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
